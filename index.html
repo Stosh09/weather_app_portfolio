@@ -18,7 +18,26 @@
 					Monday, 24 May
 				</div>
 				<div class="others" id="current-weather-conditions">
-					
+					<div class="weather-item">
+						<div>Humidity</div>
+						<div>${humidity}</div>
+					</div>
+					<div class="weather-item">
+						<div>Pressure</div>
+						<div>${pressure}</div>
+					</div>
+					<div class="weather-item">
+						<div>Wind Speed</div>
+						<div>${wind_speed}</div>
+					</div>
+					<div class="weather-item">
+						<div>Sunrise</div>
+						<div>${window.moment(sunrise).format('HH:mm a')}</div>
+					</div>
+					<div class="weather-item">
+						<div>Sunset</div>
+						<div>${window.moment(sunset).format('HH:mm a')}</div>
+					</div>
 				</div>
 			</div>
 			<div class="place-container">
