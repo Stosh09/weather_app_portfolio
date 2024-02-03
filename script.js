@@ -69,8 +69,8 @@ function getWeatherData() {
 function showWeatherData(data) {
   let { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
 
-  console.log(`${sunrise}`);
-  console.log(`${sunset}`);
+  timeZone.innerHTML = data.timezone
+  country.innerHTML = data.lat + 'N ' + data.lon + 'E'
 
   currentWeatherItemsElement.innerHTML = `<div class="weather-item">
 	<div>Humidity</div>
@@ -86,10 +86,39 @@ function showWeatherData(data) {
 </div>
 <div class="weather-item">
 	<div>Sunrise</div>
-	<div>${window.moment(sunrise * 1000).format('HH:mm a')}</div>
+	<div>${window.moment(sunrise * 1000).format("HH:mm a")}</div>
 </div>
 <div class="weather-item">
 	<div>Sunset</div>
-	<div>${window.moment(sunset * 1000).format('HH:mm a')}</div>
+	<div>${window.moment(sunset * 1000).format("HH:mm a")}</div>
 </div>`;
+
+  let otherDayForecast = "";
+  data.daily.forEach((day, idx) => {
+    if (idx == 0) {
+      currentTempElement.innerHTML = `
+       <img
+          src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png"
+          alt="weather icon"
+          class="w-icon"
+        />
+        <div class="other">
+          <div class="day">${window.moment(day.dt * 1000).format("ddd")}</div>
+          <div class="temp">Night - ${day.temp.night}&#176;C</div>
+          <div class="temp">Day - ${day.temp.day}&#176;C</div>
+        </div>
+       `
+    } else {
+      otherDayForecast += `
+  <div class="weather-forecast-items">
+  <div class="day">${window.moment(day.dt * 1000).format("ddd")}</div>
+  <img src=" https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+  <div class="temp">Night - ${day.temp.night}&#176;C</div>
+  <div class="temp">Day - ${day.temp.day}&#176;C</div>
+</div>`;
+    }
+  });
+
+
+  weatherForecastElement.innerHTML = otherDayForecast;
 }
