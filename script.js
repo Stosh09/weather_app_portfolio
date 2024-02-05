@@ -122,3 +122,7 @@ function showWeatherData(data) {
 
   weatherForecastElement.innerHTML = otherDayForecast;
 }
+
+module.exports = {
+  showWeatherData,
+};
