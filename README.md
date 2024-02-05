@@ -33,7 +33,7 @@ This is a simple weather app that displays current weather data and a weather fo
    cd weather_app_portfolio
    ```
 
-3. **Install dependencies:gear::**
+3. **Install dependencies :gear::**
 
    ```
    npm install
