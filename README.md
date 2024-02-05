@@ -21,13 +21,13 @@ This is a simple weather app that displays current weather data and a weather fo
 
 ## Getting Started
 
-1. **Clone the repository:**
+1. **Clone the repository :dna::**
 
    ```
    git clone https://github.com/Stosh09/weather_app_portfolio.git
    ```
 
-2. **Navigate to the project directory:**
+2. **Navigate to the project directory :open_file_folder::**
 
    ```
    cd weather_app_portfolio
