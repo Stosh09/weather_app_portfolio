@@ -33,7 +33,7 @@ This is a simple weather app that displays current weather data and a weather fo
    cd weather_app_portfolio
    ```
 
-3. **Install dependencies:**
+3. **Install dependencies:gear::**
 
    ```
    npm install
@@ -45,7 +45,7 @@ This is a simple weather app that displays current weather data and a weather fo
 
    Open `index.html` in your preferred web browser.
 
-## Deployed on GitHub Pages
+## Deployed on GitHub Pages :page_with_curl:
 
 The Weather App is deployed and accessible on GitHub Pages. You can visit it at [https://stosh09.github.io/weather_app_portfolio/](https://stosh09.github.io/weather_app_portfolio/).
 
@@ -57,7 +57,7 @@ To run tests using Jest:
 npm test
 ```
 
-## Project Structure
+## Project Structure :file_folder:
 
 - `index.html`: The main HTML file for the app.
 - `style.css`: Stylesheet for the app.
